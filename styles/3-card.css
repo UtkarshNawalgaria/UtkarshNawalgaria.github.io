@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --color-orange: hsl(31, 77%, 52%);
+  --color-cyan: hsl(184, 100%, 22%);
+  --color-dark-cyan: hsl(179, 100%, 13%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: hsl(0, 0%, 95%);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+.flex {
+  display: flex;
+  border-radius: 10px;
+}
+
+.card {
+  padding: 50px 40px;
+}
+
+.card__btn {
+  padding: 5% 10%;
+  background-color: white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.card__heading {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.card__detail {
+  margin: 40px 0 90px 0;
+  color: hsla(0, 0%, 100%, 0.75);
+  padding-right: 15px;
+}
+
+.color-orange {
+  background-color: var(--color-orange);
+  border-radius: 3px 0 0 3px;
+}
+
+.color-orange .card__btn {
+  color: var(--color-orange);
+}
+
+.color-orange .card__btn:focus {
+  color: hsl(0, 0%, 95%);
+  background-color: var(--color-orange);
+  border: 2px white solid;
+}
+
+.color-cyan {
+  background-color: var(--color-cyan);
+}
+
+.color-cyan .card__btn {
+  color: var(--color-cyan);
+}
+
+.color-cyan .card__btn:focus {
+  color: hsl(0, 0%, 95%);
+  background-color: var(--color-cyan);
+  border: 2px white solid;
+}
+
+.color-dark-cyan {
+  background-color: var(--color-dark-cyan);
+  border-radius: 0 3px 3px 0;
+}
+
+.color-dark-cyan .card__btn {
+  color: var(--color-dark-cyan);
+}
+
+.color-dark-cyan .card__btn:focus {
+  color: hsl(0, 0%, 95%);
+  background-color: var(--color-dark-cyan);
+  border: 2px white solid;
+}
+
+@media (max-width: 500px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .container {
+    height: 100%;
+    margin: 20px;
+    max-width: 100%;
+  }
+
+  .color-orange {
+    border-radius: 3px 3px 0 0;
+  }
+
+  .color-dark-cyan {
+    border-radius: 0 0 3px 3px;
+  }
+}
